@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>D.R Servicios | Reformas Profesionales</title>
+
+<meta name="description" content="Electricidad, fontanería, pintura y reformas en tu zona. Presupuesto gratis y atención rápida.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif
+}
+
+body{
+background:#f4f6fb;
+color:#333
+}
+
+/* NAV */
+nav{
+background:#2d3e78;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px
+}
+
+/* HERO */
+.hero{
+position:relative;
+background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.contenido-hero{
+position:relative;
+z-index:2;
+width:100%;
+max-width:1250px;
+padding:0 20px;
+}
+
+/* LOGO */
+.hero h1{
+font-size:0;
+margin-bottom:25px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:28px;
+white-space:nowrap;
+width:100%;
+}
+
+.logo-dr{
+font-size:100px;
+font-weight:700;
+line-height:0.9;
+letter-spacing:-7px;
+flex-shrink:0;
+}
+
+.logo-texto{
+font-size:52px;
+font-weight:700;
+line-height:1;
+text-align:left;
+white-space:nowrap;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.badges{
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.badges span{
+background:rgba(255,255,255,0.2);
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.call{
+background:white;
+color:#2d3e78;
+margin-left:10px;
+}
+
+/* SECTION */
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto
+}
+
+h2{
+text-align:center;
+margin-bottom:40px
+}
+
+/* SERVICES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px)
+}
+
+/* GALERIA */
+.galeria img{
+width:100%;
+border-radius:10px;
+}
+
+/* PASOS */
+.pasos div{
+background:#eef2ff;
+padding:20px;
+border-radius:10px;
+}
+
+/* TESTIMONIOS */
+.testimonio{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* CONTACTO */
+.contacto{
+text-align:center
+}
+
+.telefono{
+font-size:30px;
+font-weight:bold;
+margin:20px
+}
+
+/* FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.float a{
+padding:15px;
+border-radius:50%;
+color:white;
+text-decoration:none;
+}
+
+.w{
+background:#25D366
+}
+
+.c{
+background:#2d3e78
+}
+
+footer{
+background:#2d3e78;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+.contenido-hero{
+max-width:100%;
+}
+
+.logo-dr{
+font-size:80px;
+}
+
+.logo-texto{
+font-size:42px;
+}
+
+.hero h1{
+gap:22px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+gap:12px;
+}
+
+.logo-dr{
+font-size:58px;
+letter-spacing:-4px;
+}
+
+.logo-texto{
+font-size:27px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+gap:8px;
+}
+
+.logo-dr{
+font-size:42px;
+}
+
+.logo-texto{
+font-size:19px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<strong>D.R Servicios</strong>
+
+<div>
+
+<a href="#servicios">Servicios</a>
+
+<a href="#contacto">Contacto</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="overlay"></div>
+
+<div class="contenido-hero">
+
+<h1>
+
+<span class="logo-dr">D.R</span>
+
+<span class="logo-texto">SERVICIOS Y REFORMAS</span>
+
+</h1>
+
+<p>
+Electricidad · Fontanería · Pintura · Paleteria · Aire acondicionado
+</p>
+
+<div class="badges">
+
+<span>✔ 15+ años experiencia</span>
+
+<span>✔ Presupuesto sin compromiso</span>
+
+<span>✔ Atención inmediata</span>
+
+</div>
+
+<a class="btn whatsapp" href="https://wa.me/34676799010">
+💬 WhatsApp
+</a>
+
+<a class="btn call" href="tel:676799010">
+📞 Llamar
+</a>
+
+</div>
+
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+
+<h2>Servicios</h2>
+
+<div class="grid">
+
+<div class="card">⚡ Electricidad</div>
+
+<div class="card">🚿 Fontanería</div>
+
+<div class="card">🎨 Pintura</div>
+
+<div class="card">❄️ Aire acondicionado</div>
+
+<div class="card">🔧 paleteria</div>
+
+<div class="card">🔧 Reparaciones</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+<section>
+
+<h2>Trabajos realizados</h2>
+
+<div class="grid galeria">
+
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828" alt="Trabajo de pintura">
+
+<img src="https://images.unsplash.com/photo-1581092919535-7146ff9a5c0b" alt="Instalación aire acondicionado">
+
+<img src="https://images.unsplash.com/photo-1581579188871-45ea61f2a8c8" alt="Trabajo de fontanería">
+
+</div>
+
+</section>
+
+<!-- PROCESO -->
+<section>
+
+<h2>¿Cómo trabajamos?</h2>
+
+<div class="grid pasos">
+
+<div>1. Nos contactás</div>
+
+<div>2. Presupuesto sin compromiso</div>
+
+<div>3. Realizamos el trabajo</div>
+
+<div>4. Cliente satisfecho</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+
+<h2>Clientes satisfechos</h2>
+
+<div class="testimonio">
+⭐ Muy profesional y rápido
+</div>
+
+<div class="testimonio">
+⭐ Excelente precio
+</div>
+
+<div class="testimonio">
+⭐ Recomendado 100%
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<p>Ronald D</p>
+
+<div class="telefono">
+690 2174 15 / 676 79 9010
+</div>
+
+<a class="btn whatsapp" href="https://wa.me/34676799010">
+Escribirme por WhatsApp
+</a>
+
+<form action="mailto:ronald20082012@gmail.com" method="post" enctype="text/plain">
+
+<br><br>
+
+<input
+type="text"
+placeholder="Nombre"
+required
+style="padding:10px;width:80%"
+>
+
+<br><br>
+
+<input
+type="email"
+placeholder="Email"
+required
+style="padding:10px;width:80%"
+>
+
+<br><br>
+
+<textarea
+placeholder="Mensaje"
+required
+style="padding:10px;width:80%"
+></textarea>
+
+<br><br>
+
+<button class="btn call">
+Enviar
+</button>
+
+</form>
+
+</section>
+
+<!-- BOTONES -->
+<div class="float">
+
+<a class="w" href="https://wa.me/34676799010">
+💬
+</a>
+
+<a class="c" href="tel:676799010">
+📞
+</a>
+
+</div>
+
+<footer>
+
+© 2026 D.R Servicios - Todos los derechos reservados
+
+</footer>
+
+</body>
+</html>
